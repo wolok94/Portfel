@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Application.Functions.User.Query
+namespace Portfel.Application.Functions.UserFunctions.Query
 {
     public class GetUserQueryHandler : IRequestHandler<GetUserQuery, GetUserViewModel>
     {
