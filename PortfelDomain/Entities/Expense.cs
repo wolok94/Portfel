@@ -16,5 +16,10 @@ namespace PortfelDomain
         public DateTime DateOfPurchase { get; set; }
         public double Sum { get; set; }
 
+        public Expense()
+        {
+            Sum = Products.Sum(x => x.Amount * x.Price);
+        }
+
     }
 }
