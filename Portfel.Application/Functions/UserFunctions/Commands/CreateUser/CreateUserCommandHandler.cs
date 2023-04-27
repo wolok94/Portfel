@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.UserFunctions.Commands.CreateUser
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, User>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
     {
         private readonly IUserRepository _userRepository;
         private readonly IPasswordHasher<User> _passwordHasher;
@@ -20,18 +20,19 @@ namespace Portfel.Application.Functions.UserFunctions.Commands.CreateUser
             _userRepository = userRepository;
             _passwordHasher = passwordHasher;
         }
-        public async Task<User> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
 
             var user = await _userRepository.AddAsync(new User
             {
+                NickName = request.NickName
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email,
 
             });
             user.EncryptedPassword = GetHashedPassword(user, request.Password);
-            return user;
+            return user.Id;
         }
         private string GetHashedPassword(User user, string password)
         {

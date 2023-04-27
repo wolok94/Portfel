@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.UserFunctions.Commands.CreateUser
 {
-    public class CreateUserCommand : IRequest<User>
+    public class CreateUserCommand : IRequest<int>
     {
+        public string NickName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
