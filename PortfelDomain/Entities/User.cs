@@ -18,6 +18,13 @@ namespace PortfelDomain
         public List<Expense> Expenses { get; set; } = new List<Expense>();
         public List<SavingGoal> SavingGoals { get; set; } = new List<SavingGoal>();
         public List<ShoppingList> shoppingLists { get; set; } = new List<ShoppingList>();
+        public double Balance { get; set; }
+
+
+        public User()
+        {
+            Balance = Incomes.Sum(x => x.sumOfIncome) - Expenses.Sum(x => x.Sum);
+        }
 
     }
 }
