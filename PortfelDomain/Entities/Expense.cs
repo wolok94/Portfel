@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Domain.Entities
+namespace PortfelDomain
 {
-    internal class Expense
+    public class Expense
     {
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
+        public List<Product> Products { get; set; }
+        public DateTime DateOfPurchase { get; set; }
+        public double Sum { get; set; }
+
     }
 }

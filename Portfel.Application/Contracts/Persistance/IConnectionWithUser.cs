@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PortfelDomain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Contracts.Persistance
 {
-    internal interface IConnectionWithUser
+    public interface IConnectionWithUser : IAsyncRepository<ConnectionWithUser>
     {
     }
 }
