@@ -38,7 +38,7 @@ namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
                     {
                         if (requestPropertyInfo.Name == userPropertyInfo.Name)
                         {
-                            userPropertyInfo.SetValue(user, requestPropertyInfo);
+                            userPropertyInfo.SetValue(user, requestPropertyInfo.GetValue(request));
                             break;
                         }
                     }

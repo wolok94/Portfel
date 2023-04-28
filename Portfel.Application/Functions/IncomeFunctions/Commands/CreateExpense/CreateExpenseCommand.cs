@@ -11,6 +11,5 @@ namespace Portfel.Application.Functions.IncomeFunctions.Commands.CreateExpense
     public class CreateExpenseCommand : IRequest<int>
     {
         public List<Product> Products { get; set; }
-        public DateTime DateOfPurchase { get; set; } = DateTime.Now;
-    }
+        public DateTime DateOfPurchase { get; set; }
 }
