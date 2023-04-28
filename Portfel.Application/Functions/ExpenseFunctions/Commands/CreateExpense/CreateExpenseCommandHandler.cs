@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Application.Functions.IncomeFunctions.Commands.CreateExpense
+namespace Portfel.Application.Functions.ExpenseFunctions.Commands.CreateExpense
 {
     public class CreateExpenseCommandHandler : IRequestHandler<CreateExpenseCommand, int>
     {

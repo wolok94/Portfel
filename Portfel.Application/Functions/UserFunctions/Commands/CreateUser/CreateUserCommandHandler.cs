@@ -25,7 +25,7 @@ namespace Portfel.Application.Functions.UserFunctions.Commands.CreateUser
 
             var user = await _userRepository.AddAsync(new User
             {
-                NickName = request.NickName
+                NickName = request.NickName,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email,

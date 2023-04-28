@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Application.Functions.IncomeFunctions.Commands.UpdateExpense
+namespace Portfel.Application.Functions.ExpenseFunctions.Commands.UpdateExpense
 {
     public class UpdateExpenseCommandHandler : IRequestHandler<UpdateExpenseCommand, Unit>
     {

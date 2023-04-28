@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Application.Functions.IncomeFunctions.Commands.DeleteExpense
+namespace Portfel.Application.Functions.ExpenseFunctions.Commands.DeleteExpense
 {
     public class DeleteExpenseCommandHandler : IRequestHandler<DeleteExpenseCommand, Unit>
     {
