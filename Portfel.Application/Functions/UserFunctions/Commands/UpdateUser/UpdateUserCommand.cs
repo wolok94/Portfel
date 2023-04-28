@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
 {
-    public class UpdateUserCommand : IRequest
+    public class UpdateUserCommand : IRequest<Unit>
     {
         public int Id { get; set; }
         public string? FirstName { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Contracts.Persistance
 {
-    public interface ISavingGoal : IAsyncRepository<SavingGoal>
+    public interface ISavingGoalsRepository : IAsyncRepository<SavingGoal>
     {
     }
 }

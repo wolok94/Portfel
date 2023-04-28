@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
 {
-    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand>
+    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
     {
         private readonly IUserRepository _userRepository;
 
@@ -18,11 +18,12 @@ namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
         {
             _userRepository = userRepository;
         }
-        public async Task Handle(UpdateUserCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
             var user = await _userRepository.GetById(request.Id);
             var modifiedUser = GetModifiedUser(request, user);
             await _userRepository.UpdateAsync(modifiedUser);
+            return Unit.Value;
 
         }
 
@@ -31,12 +32,15 @@ namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
 
             foreach (var requestPropertyInfo in request.GetType().GetProperties())
             {
-                foreach (var userPropertyInfo in user.GetType().GetProperties())
+                if (requestPropertyInfo != null)
                 {
-                    if (requestPropertyInfo != null && requestPropertyInfo.Name == userPropertyInfo.Name)
+                    foreach (var userPropertyInfo in user.GetType().GetProperties())
                     {
-                        userPropertyInfo.SetValue(user, requestPropertyInfo);
-                        break;
+                        if (requestPropertyInfo.Name == userPropertyInfo.Name)
+                        {
+                            userPropertyInfo.SetValue(user, requestPropertyInfo);
+                            break;
+                        }
                     }
                 }
             }

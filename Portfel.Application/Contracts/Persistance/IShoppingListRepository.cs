@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Contracts.Persistance
 {
-    public interface IExpense : IAsyncRepository<Expense>
+    public interface IShoppingListRepository : IAsyncRepository<ShoppingList>
     {
     }
 }
