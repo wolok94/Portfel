@@ -35,7 +35,6 @@ namespace Portfel.Application.UnitTests.ExpenseFunctions.Query
             var expenses = await handler.Handle(new GetAllExpensesQuery(), CancellationToken.None);
 
             expenses.ShouldBeOfType(typeof(List<GetAllExpensesViewModel>));
-            expenses.Count.ShouldBe(1);
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel_Unit_Tests.ExpenseFunctions.Commands
+namespace Portfel.Application.UnitTests.ExpenseFunctions.Commands.CreateExpense
 {
     public class CreateExpenseTest
     {

@@ -22,6 +22,17 @@ namespace Portfel.Application.UnitTests.Helper
                 return expense;
             });
 
+            mock.Setup(x => x.DeleteAsync(It.IsAny<Expense>())).Callback<Expense>((entity) =>
+            {
+                expenses.Remove(entity);
+            });
+
+            mock.Setup(x => x.GetById(It.IsAny<int>())).ReturnsAsync((int id) =>
+            {
+                var expense = expenses.FirstOrDefault(x => x.Id == id);
+                return expense;
+            });
+
             mock.Setup(x => x.GetAll()).ReturnsAsync(expenses);
 
 
@@ -45,6 +56,12 @@ namespace Portfel.Application.UnitTests.Helper
                 {
                     DateOfPurchase = DateTime.Now,
                     Id = 1,
+                    Products = products
+                },
+                new Expense()
+                {
+                    DateOfPurchase = DateTime.Now,
+                    Id = 2,
                     Products = products
                 }
             };
