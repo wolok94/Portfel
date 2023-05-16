@@ -29,13 +29,13 @@ namespace Portfel.Application.Functions.ExpenseFunctions.Commands.UpdateExpense
         {
             foreach(var requestProperty in request.GetType().GetProperties())
             {
-                if (requestProperty != null)
+                if (requestProperty.GetValue(request) != null)
                 {
                     foreach(var expenseProperty in expense.GetType().GetProperties())
                     {
                         if (requestProperty.Name == expenseProperty.Name)
                         {
-                            expenseProperty.SetValue(expense, requestProperty.GetValue(expense));
+                            expenseProperty.SetValue(expense, requestProperty.GetValue(request));
                         }
                     }
                 }

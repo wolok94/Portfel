@@ -33,6 +33,13 @@ namespace Portfel.Application.UnitTests.Helper
                 return expense;
             });
 
+            mock.Setup(x => x.UpdateAsync(It.IsAny<Expense>())).Callback<Expense>((entity) =>
+            {
+                var expense = expenses.FirstOrDefault(x => x.Id == entity.Id);
+                expenses.Remove(expense);
+                expenses.Add(entity);
+            });
+
             mock.Setup(x => x.GetAll()).ReturnsAsync(expenses);
 
 
