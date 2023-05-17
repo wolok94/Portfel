@@ -24,6 +24,17 @@ namespace Portfel.Application.UnitTests.Helper
 
             mock.Setup(x => x.GetAll()).ReturnsAsync(users);
 
+            mock.Setup(x => x.DeleteAsync(It.IsAny<User>())).Callback((User entity) =>
+            {
+                users.Remove(entity);
+            });
+
+            mock.Setup(x => x.GetById(It.IsAny<int>())).ReturnsAsync((int id) =>
+            {
+                var user = users.FirstOrDefault(x => x.Id == id);
+                return user;
+            });
+
             return mock;
         }
 
