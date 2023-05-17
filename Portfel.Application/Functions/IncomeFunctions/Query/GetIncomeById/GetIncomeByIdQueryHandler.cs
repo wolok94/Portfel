@@ -19,7 +19,9 @@ namespace Portfel.Application.Functions.IncomeFunctions.Query.GetIncomeById
         }
         public Task<Income> Handle(GetIncomeByIdQuery request, CancellationToken cancellationToken)
         {
-            var income = _incomeRepository.GetById(request.)
+            var income = _incomeRepository.GetById(request.IncomeId);
+            return income;
+
         }
     }
 }
