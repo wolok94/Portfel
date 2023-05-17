@@ -34,6 +34,13 @@ namespace Portfel.Application.UnitTests.Helper
                 var income = incomes.FirstOrDefault(x => x.Id == id);
                 return income;
             });
+
+            mock.Setup(x => x.UpdateAsync(It.IsAny<Income>())).Callback((Income entity) =>
+            {
+                var income = incomes.FirstOrDefault(x => x.Id == entity.Id);
+                incomes.Remove(income);
+                incomes.Add(entity);
+            });
             return mock;
         }
 
