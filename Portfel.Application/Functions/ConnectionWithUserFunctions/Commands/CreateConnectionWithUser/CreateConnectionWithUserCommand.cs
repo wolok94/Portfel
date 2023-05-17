@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands
+namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands.CreateConnectionWithUser
 {
     public class CreateConnectionWithUserCommand : IRequest<int>
     {

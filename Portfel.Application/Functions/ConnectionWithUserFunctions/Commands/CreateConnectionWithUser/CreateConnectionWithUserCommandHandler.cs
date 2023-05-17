@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands
+namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands.CreateConnectionWithUser
 {
     public class CreateConnectionWithUserCommandHandler : IRequestHandler<CreateConnectionWithUserCommand, int>
     {
