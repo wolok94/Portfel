@@ -11,9 +11,9 @@ namespace Portfel.Application.UnitTests.Helper
 {
     public class GetConnectionWithUserHelper
     {
-        public static IMock<IConnectionWithUser> GetMock()
+        public static IMock<IConnectionWithUserRepository> GetMock()
         {
-            var mock = new Mock<IConnectionWithUser>();
+            var mock = new Mock<IConnectionWithUserRepository>();
             var connections = GetConnections();
 
             mock.Setup(x => x.GetAll()).ReturnsAsync(connections);
@@ -21,6 +21,15 @@ namespace Portfel.Application.UnitTests.Helper
             {
                 connections.Add(connection);
                 return connection;
+            });
+            mock.Setup(x => x.GetById(It.IsAny<int>())).ReturnsAsync((int id) =>
+            {
+                var connection = connections.FirstOrDefault(x => x.Id == id);
+                return connection;
+            });
+            mock.Setup(x => x.DeleteAsync(It.IsAny<ConnectionWithUser>())).Callback((ConnectionWithUser connection) =>
+            {
+                connections.Remove(connection);
             });
 
             return mock;

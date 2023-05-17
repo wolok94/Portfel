@@ -1,6 +1,7 @@
 ﻿using Moq;
 using Portfel.Application.Contracts.Persistance;
 using Portfel.Application.Functions.ConnectionWithUserFunctions.Commands;
+using Portfel.Application.Functions.ConnectionWithUserFunctions.Commands.CreateConnectionWithUser;
 using Portfel.Application.UnitTests.Helper;
 using Portfel.Application.UserContext;
 using Shouldly;
@@ -14,7 +15,7 @@ namespace Portfel.Application.UnitTests.ConnectionWithUserFunctions.Commands
 {
     public class CreateConnectionWithUserCommandTest
     {
-        private readonly IMock<IConnectionWithUser> _mockRepository;
+        private readonly IMock<IConnectionWithUserRepository> _mockRepository;
 
         public CreateConnectionWithUserCommandTest()
         {

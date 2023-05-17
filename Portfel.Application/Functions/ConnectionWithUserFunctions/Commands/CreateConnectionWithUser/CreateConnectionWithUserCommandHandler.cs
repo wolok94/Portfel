@@ -12,10 +12,10 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands.Cre
 {
     public class CreateConnectionWithUserCommandHandler : IRequestHandler<CreateConnectionWithUserCommand, int>
     {
-        private readonly IConnectionWithUser _connectionWithUser;
+        private readonly IConnectionWithUserRepository _connectionWithUser;
         private readonly IUserContext _userContext;
 
-        public CreateConnectionWithUserCommandHandler(IConnectionWithUser connectionWithUser, IUserContext userContext)
+        public CreateConnectionWithUserCommandHandler(IConnectionWithUserRepository connectionWithUser, IUserContext userContext)
         {
             _connectionWithUser = connectionWithUser;
             _userContext = userContext;

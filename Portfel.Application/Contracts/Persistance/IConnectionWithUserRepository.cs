@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Contracts.Persistance
 {
-    public interface IConnectionWithUser : IAsyncRepository<ConnectionWithUser>
+    public interface IConnectionWithUserRepository : IAsyncRepository<ConnectionWithUser>
     {
     }
 }
