@@ -35,6 +35,13 @@ namespace Portfel.Application.UnitTests.Helper
                 return user;
             });
 
+            mock.Setup(x => x.UpdateAsync(It.IsAny<User>())).Callback((User entity) =>
+            {
+                var user = users.FirstOrDefault(x => x.Id == entity.Id);
+                users.Remove(user);
+                users.Add(entity);
+            });
+
             return mock;
         }
 

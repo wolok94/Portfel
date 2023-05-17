@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
 {
-    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
+    public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
     {
         private readonly IUserRepository _userRepository;
 
@@ -32,7 +32,7 @@ namespace Portfel.Application.Functions.UserFunctions.Commands.UpdateUser
 
             foreach (var requestPropertyInfo in request.GetType().GetProperties())
             {
-                if (requestPropertyInfo != null)
+                if (requestPropertyInfo.GetValue(request) != null)
                 {
                     foreach (var userPropertyInfo in user.GetType().GetProperties())
                     {
