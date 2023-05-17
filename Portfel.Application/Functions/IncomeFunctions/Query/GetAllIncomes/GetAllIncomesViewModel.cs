@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.IncomeFunctions.Query.GetAllIncomes
 {
-    internal class GetAllIncomesViewModel
+    public class GetAllIncomesViewModel
     {
+        public string nameOfIncome { get; set; }
+        public double sumOfIncome { get; set; }
+        public DateTime incomeDate { get; set; }
     }
 }

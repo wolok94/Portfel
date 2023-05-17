@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Portfel.Application.Functions.ExpenseFunctions.Query.GetAllExpenses;
+using Portfel.Application.Functions.IncomeFunctions.Query.GetAllIncomes;
 using PortfelDomain;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Portfel.Application.AutoMapper
         public MappingProfile()
         {
             CreateMap<Expense, GetAllExpensesViewModel>();
+            CreateMap<Income, GetAllIncomesViewModel>();
         }
 
     }
