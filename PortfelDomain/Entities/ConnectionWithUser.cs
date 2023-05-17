@@ -9,8 +9,8 @@ namespace PortfelDomain
     public class ConnectionWithUser
     {
         public int Id { get; set; }
-        public int InvitedUserId { get; set; }
-        public User InvitedUser { get; set; }
+        public int? InvitingUserId { get; set; }
+        public User InvitingUser { get; set; }
         public int AgreeingUserId { get; set; }
         public User User { get; set; }
     }
