@@ -65,9 +65,17 @@
               "target": "Package",
               "version": "[11.1.0, )"
             },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
             }
           },
           "imports": [
