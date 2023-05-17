@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Portfel.Application.Functions.ConnectionWithUserFunctions.Query.GetAllConnectionWithUser;
 using Portfel.Application.Functions.ExpenseFunctions.Query.GetAllExpenses;
 using Portfel.Application.Functions.IncomeFunctions.Query.GetAllIncomes;
 using PortfelDomain;
@@ -16,6 +17,9 @@ namespace Portfel.Application.AutoMapper
         {
             CreateMap<Expense, GetAllExpensesViewModel>();
             CreateMap<Income, GetAllIncomesViewModel>();
+            CreateMap<ConnectionWithUser, GetAllConnectionWithUserViewModel>().ForMember(x => x.invitingUserName,
+                x => x.MapFrom(x => x.InvitingUser.NickName)).ForMember(x => x.agreeingUserName, x => x.MapFrom(
+                    x => x.User.NickName));
         }
 
     }
