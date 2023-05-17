@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Query.GetConnectionWithUserById
 {
-    internal class GetConnectionWithUserByIdViewModel
+    public class GetConnectionWithUserByIdViewModel
     {
         public int Id { get; set; }
         public int AgreeingUserId { get; set; }

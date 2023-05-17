@@ -16,7 +16,8 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Query.GetCon
         {
             _connectionWithUserRepository = connectionWithUserRepository;
         }
-        async Task<GetConnectionWithUserByIdViewModel> IRequestHandler<GetConnectionWithUserByIdQuery, GetConnectionWithUserByIdViewModel>.Handle(GetConnectionWithUserByIdQuery request, CancellationToken cancellationToken)
+
+        public async Task<GetConnectionWithUserByIdViewModel> Handle(GetConnectionWithUserByIdQuery request, CancellationToken cancellationToken)
         {
             var connection = await _connectionWithUserRepository.GetById(request.ConnectionId);
             return new GetConnectionWithUserByIdViewModel
@@ -26,5 +27,7 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Query.GetCon
                 Id = connection.Id,
             };
         }
+
+ 
     }
 }
