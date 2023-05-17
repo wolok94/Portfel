@@ -9,7 +9,7 @@ namespace PortfelDomain
     public class Income
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         public User User { get; set; }
         public string nameOfIncome { get; set; }
         public double sumOfIncome { get; set; }

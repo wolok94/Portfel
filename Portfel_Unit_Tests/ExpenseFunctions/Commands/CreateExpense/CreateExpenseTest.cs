@@ -2,6 +2,7 @@
 using Portfel.Application.Contracts.Persistance;
 using Portfel.Application.Functions.ExpenseFunctions.Commands.CreateExpense;
 using Portfel.Application.UnitTests.Helper;
+using Portfel.Application.UserContext;
 using PortfelDomain;
 using Shouldly;
 using System;
@@ -23,7 +24,7 @@ namespace Portfel.Application.UnitTests.ExpenseFunctions.Commands.CreateExpense
         public async Task AddAsync_ForValidModel_ReturnCreatedExpense()
         {
 
-            var handler = new CreateExpenseCommandHandler(_mockRepository.Object);
+            var handler = new CreateExpenseCommandHandler(_mockRepository.Object, new Mock<IUserContext>().Object);
             var expensesBeforeCount = (await _mockRepository.Object.GetAll()).Count;
 
             var expense = new CreateExpenseCommand()

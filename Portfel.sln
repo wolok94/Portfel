@@ -10,10 +10,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfel.Application", "Port
 		{3993DBF8-47C6-4F19-A4F4-B8A4CBEE02A1} = {3993DBF8-47C6-4F19-A4F4-B8A4CBEE02A1}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfel.Application.UnitTests", "Portfel_Unit_Tests\Portfel.Application.UnitTests.csproj", "{00041120-9C36-444F-955A-81CB6AF70C18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfel.Application.UnitTests", "Portfel_Unit_Tests\Portfel.Application.UnitTests.csproj", "{00041120-9C36-444F-955A-81CB6AF70C18}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CEEF85B9-D291-4322-A761-CDE6FDB867FB} = {CEEF85B9-D291-4322-A761-CDE6FDB867FB}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{68D891FF-09E1-41A9-ABFC-DFF951555022}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B6F5955B-8FF9-4A66-A476-8511290E321C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{0AE6D68B-C984-43CE-820F-A2A1A5CF1528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +42,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3993DBF8-47C6-4F19-A4F4-B8A4CBEE02A1} = {68D891FF-09E1-41A9-ABFC-DFF951555022}
+		{CEEF85B9-D291-4322-A761-CDE6FDB867FB} = {68D891FF-09E1-41A9-ABFC-DFF951555022}
+		{00041120-9C36-444F-955A-81CB6AF70C18} = {0AE6D68B-C984-43CE-820F-A2A1A5CF1528}
+		{0AE6D68B-C984-43CE-820F-A2A1A5CF1528} = {B6F5955B-8FF9-4A66-A476-8511290E321C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDA559DD-27E0-4D00-8133-F4F4453D7C3E}

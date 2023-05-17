@@ -169,3 +169,5 @@ E:\Programowanie\Projekty\Portfel\Portfel_Unit_Tests\obj\Debug\net7.0\refint\Por
 E:\Programowanie\Projekty\Portfel\Portfel_Unit_Tests\obj\Debug\net7.0\Portfel.Application.UnitTests.pdb
 E:\Programowanie\Projekty\Portfel\Portfel_Unit_Tests\obj\Debug\net7.0\Portfel.Application.UnitTests.genruntimeconfig.cache
 E:\Programowanie\Projekty\Portfel\Portfel_Unit_Tests\obj\Debug\net7.0\ref\Portfel.Application.UnitTests.dll
+E:\Programowanie\Projekty\Portfel\Portfel_Unit_Tests\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\Programowanie\Projekty\Portfel\Portfel_Unit_Tests\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
