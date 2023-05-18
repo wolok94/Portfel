@@ -11,10 +11,10 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Query.GetAll
 {
     public class GetAllConnectionsWithUserQueryHandler : IRequestHandler<GetAllConnectionsWithUserQuery, List<GetAllConnectionWithUserViewModel>>
     {
-        private readonly IConnectionWithUserRepository _connectionWithUserRepository;
+        private readonly IConnectionBetweenUsersRepository _connectionWithUserRepository;
         private readonly IMapper _mapper;
 
-        public GetAllConnectionsWithUserQueryHandler(IConnectionWithUserRepository connectionWithUserRepository, IMapper mapper)
+        public GetAllConnectionsWithUserQueryHandler(IConnectionBetweenUsersRepository connectionWithUserRepository, IMapper mapper)
         {
             _connectionWithUserRepository = connectionWithUserRepository;
             _mapper = mapper;

@@ -12,17 +12,17 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands.Cre
 {
     public class CreateConnectionWithUserCommandHandler : IRequestHandler<CreateConnectionWithUserCommand, int>
     {
-        private readonly IConnectionWithUserRepository _connectionWithUser;
+        private readonly IConnectionBetweenUsersRepository _connectionWithUser;
         private readonly IUserContext _userContext;
 
-        public CreateConnectionWithUserCommandHandler(IConnectionWithUserRepository connectionWithUser, IUserContext userContext)
+        public CreateConnectionWithUserCommandHandler(IConnectionBetweenUsersRepository connectionWithUser, IUserContext userContext)
         {
             _connectionWithUser = connectionWithUser;
             _userContext = userContext;
         }
         public async Task<int> Handle(CreateConnectionWithUserCommand request, CancellationToken cancellationToken)
         {
-            var connection = await _connectionWithUser.AddAsync(new ConnectionWithUser
+            var connection = await _connectionWithUser.AddAsync(new ConnectionBetweenUsers
             {
                 AgreeingUserId = request.AgreeingUserId,
                 InvitingUserId = _userContext.GetUserId

@@ -17,7 +17,7 @@ namespace Portfel.Application.AutoMapper
         {
             CreateMap<Expense, GetAllExpensesViewModel>();
             CreateMap<Income, GetAllIncomesViewModel>();
-            CreateMap<ConnectionWithUser, GetAllConnectionWithUserViewModel>().ForMember(x => x.invitingUserName,
+            CreateMap<ConnectionBetweenUsers, GetAllConnectionWithUserViewModel>().ForMember(x => x.invitingUserName,
                 x => x.MapFrom(x => x.InvitingUser.NickName)).ForMember(x => x.agreeingUserName, x => x.MapFrom(
                     x => x.User.NickName));
         }

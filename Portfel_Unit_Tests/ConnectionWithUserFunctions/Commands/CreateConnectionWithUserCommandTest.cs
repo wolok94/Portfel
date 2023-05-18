@@ -15,7 +15,7 @@ namespace Portfel.Application.UnitTests.ConnectionWithUserFunctions.Commands
 {
     public class CreateConnectionWithUserCommandTest
     {
-        private readonly IMock<IConnectionWithUserRepository> _mockRepository;
+        private readonly IMock<IConnectionBetweenUsersRepository> _mockRepository;
 
         public CreateConnectionWithUserCommandTest()
         {

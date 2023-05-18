@@ -15,7 +15,7 @@ namespace Portfel.Application.UnitTests.ConnectionWithUserFunctions.Query
 {
     public class GetAllConnectionWithUserQueryTest
     {
-        private readonly IMock<IConnectionWithUserRepository> _mockRepository;
+        private readonly IMock<IConnectionBetweenUsersRepository> _mockRepository;
         private readonly IMapper _mapper;
 
         public GetAllConnectionWithUserQueryTest()

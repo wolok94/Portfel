@@ -1,16 +1,15 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PortfelDomain
+namespace Portfel.Application.Functions.ProductFunctions.Commands.CreateProduct
 {
-    public class Product
+    public class CreateProductCommand : IRequest<int>
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-        public List<Expense> Expenses { get; set; }
     }
 }

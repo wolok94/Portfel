@@ -14,7 +14,7 @@ namespace PortfelDomain
         public string LastName { get; set; }
         public string Email { get; set; }
         public string EncryptedPassword { get; set; }
-        public List<ConnectionWithUser> ConnectedPeople { get; set; } = new List<ConnectionWithUser>();
+        public List<ConnectionBetweenUsers> ConnectedPeople { get; set; } = new List<ConnectionBetweenUsers>();
         public List<Income> Incomes { get; set; } = new List<Income>();
         public List<Expense> Expenses { get; set; } = new List<Expense>();
         public List<SavingGoal> SavingGoals { get; set; } = new List<SavingGoal>();

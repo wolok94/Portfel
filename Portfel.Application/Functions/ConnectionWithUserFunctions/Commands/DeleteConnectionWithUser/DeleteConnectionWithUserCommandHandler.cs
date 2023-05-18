@@ -10,9 +10,9 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Commands.Del
 {
     public class DeleteConnectionWithUserCommandHandler : IRequestHandler<DeleteConnectionWithUserCommand, Unit>
     {
-        private readonly IConnectionWithUserRepository _connectionWithUserRepository;
+        private readonly IConnectionBetweenUsersRepository _connectionWithUserRepository;
 
-        public DeleteConnectionWithUserCommandHandler(IConnectionWithUserRepository connectionWithUserRepository)
+        public DeleteConnectionWithUserCommandHandler(IConnectionBetweenUsersRepository connectionWithUserRepository)
         {
             _connectionWithUserRepository = connectionWithUserRepository;
         }

@@ -11,13 +11,13 @@ namespace Portfel.Application.UnitTests.Helper
 {
     public class GetConnectionWithUserHelper
     {
-        public static IMock<IConnectionWithUserRepository> GetMock()
+        public static IMock<IConnectionBetweenUsersRepository> GetMock()
         {
-            var mock = new Mock<IConnectionWithUserRepository>();
+            var mock = new Mock<IConnectionBetweenUsersRepository>();
             var connections = GetConnections();
 
             mock.Setup(x => x.GetAll()).ReturnsAsync(connections);
-            mock.Setup(x => x.AddAsync(It.IsAny<ConnectionWithUser>())).ReturnsAsync((ConnectionWithUser connection) =>
+            mock.Setup(x => x.AddAsync(It.IsAny<ConnectionBetweenUsers>())).ReturnsAsync((ConnectionBetweenUsers connection) =>
             {
                 connections.Add(connection);
                 return connection;
@@ -27,7 +27,7 @@ namespace Portfel.Application.UnitTests.Helper
                 var connection = connections.FirstOrDefault(x => x.Id == id);
                 return connection;
             });
-            mock.Setup(x => x.DeleteAsync(It.IsAny<ConnectionWithUser>())).Callback((ConnectionWithUser connection) =>
+            mock.Setup(x => x.DeleteAsync(It.IsAny<ConnectionBetweenUsers>())).Callback((ConnectionBetweenUsers connection) =>
             {
                 connections.Remove(connection);
             });
@@ -35,17 +35,17 @@ namespace Portfel.Application.UnitTests.Helper
             return mock;
         }
 
-        private static List<ConnectionWithUser> GetConnections()
+        private static List<ConnectionBetweenUsers> GetConnections()
         {
-            return new List<ConnectionWithUser>
+            return new List<ConnectionBetweenUsers>
             {
-                new ConnectionWithUser
+                new ConnectionBetweenUsers
                 {
                     AgreeingUserId = 1,
                     Id = 1,
                     InvitingUserId = 2,
                 },
-                new ConnectionWithUser
+                new ConnectionBetweenUsers
                 {
                     Id = 2,
                     AgreeingUserId = 3,

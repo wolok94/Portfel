@@ -10,9 +10,9 @@ namespace Portfel.Application.Functions.ConnectionWithUserFunctions.Query.GetCon
 {
     public class GetConnectionWithUserByIdQueryHandler : IRequestHandler<GetConnectionWithUserByIdQuery, GetConnectionWithUserByIdViewModel>
     {
-        private readonly IConnectionWithUserRepository _connectionWithUserRepository;
+        private readonly IConnectionBetweenUsersRepository _connectionWithUserRepository;
 
-        public GetConnectionWithUserByIdQueryHandler(IConnectionWithUserRepository connectionWithUserRepository)
+        public GetConnectionWithUserByIdQueryHandler(IConnectionBetweenUsersRepository connectionWithUserRepository)
         {
             _connectionWithUserRepository = connectionWithUserRepository;
         }
