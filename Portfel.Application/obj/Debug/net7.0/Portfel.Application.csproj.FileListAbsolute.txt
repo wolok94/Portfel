@@ -1,0 +1,15 @@
+E:\Programowanie\Projekty\Portfel\Portfel.Application\bin\Debug\net7.0\Portfel.Application.deps.json
+E:\Programowanie\Projekty\Portfel\Portfel.Application\bin\Debug\net7.0\Portfel.Application.dll
+E:\Programowanie\Projekty\Portfel\Portfel.Application\bin\Debug\net7.0\Portfel.Application.pdb
+E:\Programowanie\Projekty\Portfel\Portfel.Application\bin\Debug\net7.0\Portfel.Domain.dll
+E:\Programowanie\Projekty\Portfel\Portfel.Application\bin\Debug\net7.0\Portfel.Domain.pdb
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.csproj.AssemblyReference.cache
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.AssemblyInfoInputs.cache
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.AssemblyInfo.cs
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.csproj.CoreCompileInputs.cache
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.csproj.CopyComplete
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.dll
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\refint\Portfel.Application.dll
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\Portfel.Application.pdb
+E:\Programowanie\Projekty\Portfel\Portfel.Application\obj\Debug\net7.0\ref\Portfel.Application.dll
