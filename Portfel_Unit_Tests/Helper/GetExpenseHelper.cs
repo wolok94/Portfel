@@ -54,7 +54,7 @@ namespace Portfel.Application.UnitTests.Helper
                             Id = 1,
                             Name = "Test",
                             Price = 100,
-                            Amount = 2,
+  
                         }
                     };
             var expenses = new List<Expense>

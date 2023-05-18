@@ -1,0 +1,6 @@
+*.suo
+*.dll
+*.pdb
+*.cache
+*.vsidx
+*.testlog

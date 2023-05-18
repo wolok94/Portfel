@@ -37,7 +37,7 @@ namespace Portfel.Application.UnitTests.ExpenseFunctions.Commands.CreateExpense
                         Id = 2,
                         Name = "Test1",
                         Price = 150,
-                        Amount = 2
+
                     }
                 }
             };
